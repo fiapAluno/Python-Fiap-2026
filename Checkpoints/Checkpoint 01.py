@@ -36,14 +36,14 @@ bonus = float(question('Qual foi o seu bonus do mes?', ""))
 desconto = float(question('Qual é o desconto total do mes?', ""))
 
 ValorBruto = valor_de_hora_de_trabalho * quantidade_de_horas_no_mes + bonus
-ValorLiquido =  ValorBruto * (desconto * 0.01)
+ValorLiquido =  ValorBruto - desconto
 
 print("-"*70)
 print(f'Nome do colaborador: {nome}')
 print(f'Horas trabalhadas por dia: {valor_de_hora_de_trabalho:.0f} horas')
 print(f'Horas trabalhadas no mês: {quantidade_de_horas_no_mes:.0f} horas')
 print(f'Bônus: R${bonus:.2f}')
-print(f'Desconto: R${desconto:.2f} ({desconto:.0f}%)')
+print(f'Desconto: R${desconto:.2f}')
 print(f'Seu salario bruto: R${ValorBruto:.2f}')
 print(f'Seu salario liquido: R${ValorLiquido:.2f}')
 print("-"*70)
