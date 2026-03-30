@@ -25,3 +25,17 @@ print(intRandomNum)
 
 randomRangeNum = random.randrange(1, 10)
 print(randomRangeNum)
+
+# Match Case
+
+userChoice = 0
+
+match userChoice:
+    case 0:
+        status = "Exit program"
+    case 1:
+        status = "Join program"
+    case _:
+        status = "Error"
+
+print(status)
