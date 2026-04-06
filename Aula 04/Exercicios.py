@@ -42,6 +42,20 @@ def multiple_numbers(numA, numB):
     else:
         print("Os numeros não são multiplos")
 
+# Exercise 6 - Calculator
+
+def calculator(num1, num2, character):
+    if character == "+":
+        result = num1 + num2
+    elif character == "-":
+        result = num1 - num2
+    elif character == "/":
+        result = num1 / num2
+    elif character == "*":
+        result = num1 * num2
+
+    print(f"O resultado da operação é {result}")
+
 ### Question Loader
 
 def question_loader(questionNum):
@@ -64,6 +78,11 @@ def question_loader(questionNum):
         numA = float(input("Digite o numero A: "))
         numB = float(input("Digite o numero B: "))
         multiple_numbers(numA, numB)
+    elif questionNum == 6:
+        num1 = float(input("Digite o primeiro numero: "))
+        num2 = float(input("Digite o segundo numero: "))
+        character = input("Digite o caracter: ")
+        calculator(num1, num2, character)
     else:
         print(f"Exercicio {questionNum} não finalizado.")
 
