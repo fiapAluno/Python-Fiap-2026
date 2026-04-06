@@ -1,6 +1,6 @@
-# Audio Player
+# Exercise 1 - Audio Player
 
-# Pair or Odd Checker
+# Exercise 2 - Pair or Odd Checker
 
 def pair_or_odd(num):
     if num % 2 == 0:
@@ -8,7 +8,7 @@ def pair_or_odd(num):
     elif num % 2 == 1:
         print(f"O numero {num} é impar")
 
-# Highest number
+# Exercise 3 - Highest number
 
 def highest_number(num1, num2):
     if num1 == num2:
@@ -18,7 +18,7 @@ def highest_number(num1, num2):
     elif num2 > num1:
         print(f"{num2} é maior que {num1}")
 
-# Grades
+# Exercise 4 - Grades
 
 def grades_media(grade1, grade2, grade3, grade4):
     media = (grade1 + grade2 + grade3 + grade4) / 4
@@ -30,7 +30,7 @@ def grades_media(grade1, grade2, grade3, grade4):
     elif media >= 5 and media < 7:
         print("Em recuperação")
 
-# Question Loader
+### Question Loader
 
 def question_loader(questionNum):
     if questionNum == 1:
