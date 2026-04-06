@@ -1,5 +1,9 @@
 # Exercise 1 - Audio Player
 
+import pygame
+from contourpy.util.data import simple
+
+
 # Exercise 2 - Pair or Odd Checker
 
 def pair_or_odd(num):
@@ -30,27 +34,38 @@ def grades_media(grade1, grade2, grade3, grade4):
     elif media >= 5 and media < 7:
         print("Em recuperação")
 
+# Exercise 5 - Multiple numbers
+
+def multiple_numbers(numA, numB):
+    if numA % numB == 0 or numB % numA == 0:
+        print("Os numeros são multiplos")
+    else:
+        print("Os numeros não são multiplos")
+
 ### Question Loader
 
 def question_loader(questionNum):
-    if questionNum == 1:
-        print("Exercicio 1 não finalizado.")
-    elif questionNum == 2:
-        print("Carregando exercicio 2.")
-        num_pair_or_odd = int(input("Digite um numero: "))
-        pair_or_odd(num_pair_or_odd)
+    print(f"Carregando exercicio {questionNum}.")
+
+    if questionNum == 2:
+        num = int(input("Digite um numero: "))
+        pair_or_odd(num)
     elif questionNum == 3:
-        print("Carregando exercicio 3.")
-        num1_highest_number = int(input("Digite o primeiro numero: "))
-        num2_highest_number = int(input("Digite o segundo numero: "))
-        highest_number(num1_highest_number, num2_highest_number)
+        num1 = int(input("Digite o primeiro numero: "))
+        num2 = int(input("Digite o segundo numero: "))
+        highest_number(num1, num2)
     elif questionNum == 4:
-        print("Carregando exercicio 4.")
-        grade1_grades_media = float(input("Digite a primeira nota: "))
-        grade2_grades_media = float(input("Digite a segunda nota: "))
-        grade3_grades_media = float(input("Digite a terceira nota: "))
-        grade4_grades_media = float(input("Digite a quarta nota: "))
-        grades_media(grade1_grades_media, grade2_grades_media, grade3_grades_media, grade4_grades_media)
+        grade1 = float(input("Digite a primeira nota: "))
+        grade2 = float(input("Digite a segunda nota: "))
+        grade3 = float(input("Digite a terceira nota: "))
+        grade4 = float(input("Digite a quarta nota: "))
+        grades_media(grade1, grade2, grade3, grade4)
+    elif questionNum == 5:
+        numA = float(input("Digite o numero A: "))
+        numB = float(input("Digite o numero B: "))
+        multiple_numbers(numA, numB)
+    else:
+        print(f"Exercicio {questionNum} não finalizado.")
 
 questionNum = int(input("Qual exercicio você quer carregar? "))
 question_loader(questionNum)
